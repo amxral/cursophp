@@ -13,7 +13,7 @@
             //Cotação copiada do google
             $cotacao = 5.16;
             //Quanto $$ você tem?
-            $real = $_GET['din'];
+            $real = $_GET['din'] ?? 0;
             //Equivalêcia em dólar
             $dolar = $real / $cotacao;
             //Formatação de moedas com Internacionalização
