@@ -12,8 +12,15 @@
         <?php 
             $num = $_POST["n"] ?? 0;
 
-            echo "Analisando o número <strong>$num</strong> informado pelo usuário.."
+            echo "<p>Analisando o número <strong> ". number_format($num, 3, ",", ".") ." </strong> informado pelo usuário:</p>";
+
+            $int = (int) $num;
+            $fra = $num - $int;
+
+            echo "<ul><li>A parte inteira do número é <strong>". number_format($int, 0, ",",".") ."</strong></li>";
+            echo "<li>A parte fracionária do número é <strong>". number_format($fra, 3, ",",".") ."</strong></li></ul>"
         ?>
+        <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>
 </html>
